@@ -1,0 +1,297 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="container">
+    <section id="hero" class="section window">
+      <div class="window-title">
+        <h2>Welcome.exe</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Welcome to My Space! ✨</h1>
+        <p class="subtitle">Frontend Developer & Creative Soul</p>
+      </div>
+    </section>
+
+    <section id="about" class="section window">
+      <div class="window-title">
+        <h2>About.txt</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <p>Hello! I'm a passionate developer who loves creating beautiful and functional websites. When I'm not coding, you can find me drawing cute illustrations and petting cats! 🐱</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section window">
+      <div class="window-title">
+        <h2>Skills.sys</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="skills-grid">
+          <div class="skill-folder">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">HTML5</div>
+              <div class="skill-item">CSS3</div>
+              <div class="skill-item">JavaScript</div>
+              <div class="skill-item">React</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">Node.js</div>
+              <div class="skill-item">Express</div>
+              <div class="skill-item">PostgreSQL</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item">Git</div>
+              <div class="skill-item">VS Code</div>
+              <div class="skill-item">Figma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section window">
+      <div class="window-title">
+        <h2>Certifications.doc</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="cert-grid">
+          <div class="cert-item">
+            <h3>AWS Certified Developer</h3>
+            <p>Amazon Web Services</p>
+            <span class="cert-date">2023</span>
+          </div>
+          <div class="cert-item">
+            <h3>React Certification</h3>
+            <p>Meta Frontend Developer</p>
+            <span class="cert-date">2023</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section window">
+      <div class="window-title">
+        <h2>Projects.folder</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="project-grid">
+          <div class="project-item">
+            <h3>Weather App</h3>
+            <p>A cute weather app that shows the forecast with adorable illustrations.</p>
+            <button class="action-button">View Project</button>
+          </div>
+          <div class="project-item">
+            <h3>Todo List</h3>
+            <p>An interactive to-do list with kawaii stickers as rewards.</p>
+            <button class="action-button">View Project</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section window">
+      <div class="window-title">
+        <h2>Contact.exe</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="contact-links">
+          <a href="mailto:your@email.com" class="action-button">
+            Email Me
+          </a>
+          <a href="https://github.com" target="_blank" class="action-button">
+            GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="action-button">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section {
+    margin: 2rem 0;
+  }
+
+  .content {
+    padding: 8px;
+  }
+
+  #hero {
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero h1 {
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+    color: var(--text);
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-folder {
+    background: var(--button-face);
+    padding: 8px;
+    border-top: 2px solid var(--button-highlight);
+    border-left: 2px solid var(--button-highlight);
+    border-right: 2px solid var(--button-shadow);
+    border-bottom: 2px solid var(--button-shadow);
+  }
+
+  .skill-folder h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "MS Sans Serif", "Quicksand", sans-serif;
+  }
+
+  .skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .skill-item {
+    background: var(--pink-bg);
+    padding: 4px 8px;
+    border-top: 1px solid var(--button-highlight);
+    border-left: 1px solid var(--button-highlight);
+    border-right: 1px solid var(--button-shadow);
+    border-bottom: 1px solid var(--button-shadow);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .cert-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-item, .project-item {
+    background: var(--button-face);
+    padding: 12px;
+    border-top: 2px solid var(--button-highlight);
+    border-left: 2px solid var(--button-highlight);
+    border-right: 2px solid var(--button-shadow);
+    border-bottom: 2px solid var(--button-shadow);
+  }
+
+  .cert-item h3, .project-item h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "MS Sans Serif", "Quicksand", sans-serif;
+  }
+
+  .cert-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 8px;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .action-button {
+    background: var(--button-face);
+    border-top: 2px solid var(--button-highlight);
+    border-left: 2px solid var(--button-highlight);
+    border-right: 2px solid var(--button-shadow);
+    border-bottom: 2px solid var(--button-shadow);
+    padding: 4px 12px;
+    font-family: "MS Sans Serif", "Quicksand", sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .action-button:active {
+    border-top: 2px solid var(--button-shadow);
+    border-left: 2px solid var(--button-shadow);
+    border-right: 2px solid var(--button-highlight);
+    border-bottom: 2px solid var(--button-highlight);
+    padding: 5px 11px 3px 13px;
+  }
+
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 2rem;
+    }
+
+    .contact-links {
+      flex-direction: column;
+    }
+
+    .action-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
