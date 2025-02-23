@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.2.5",
+    "@fontsource-variable/gluten": "^5.1.1",
+    "@fontsource/caveat": "^5.0.16",
     "@fontsource/quicksand": "^5.0.16",
-    "@fontsource/caveat": "^5.0.16"
+    "astro": "^5.2.5"
   }
 }

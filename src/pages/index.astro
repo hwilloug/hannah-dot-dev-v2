@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout>
   <div class="container">
     <section id="hero" class="section window">
       <div class="window-title">
-        <h2>Welcome.exe</h2>
+        <h2>Welcome</h2>
         <div class="window-controls">
           <button class="control-button">_</button>
           <button class="control-button">□</button>
@@ -14,93 +15,44 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
       <div class="content">
-        <h1>Welcome to My Space! ✨</h1>
-        <p class="subtitle">Frontend Developer & Creative Soul</p>
+        <h1>Welcome!</h1>
+        <p class="subtitle">Full Stack Software Engineer</p>
+        <p class="subtitle">Creative</p>
+        <div class="profile-image-container">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/poppy.png" alt="Poppy" class="profile-image">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/buddy_face.png" alt="Big Buddy" class="profile-image">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/tiger_face.png" alt="Tiger" class="profile-image">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/ray_face.png" alt="Ray" class="profile-image">
+        </div>
+
       </div>
     </section>
 
     <section id="about" class="section window">
       <div class="window-title">
-        <h2>About.txt</h2>
+        <h2>About</h2>
         <div class="window-controls">
           <button class="control-button">_</button>
           <button class="control-button">□</button>
           <button class="control-button">×</button>
         </div>
       </div>
-      <div class="content">
-        <p>Hello! I'm a passionate developer who loves creating beautiful and functional websites. When I'm not coding, you can find me drawing cute illustrations and petting cats! 🐱</p>
-      </div>
-    </section>
-
-    <section id="skills" class="section window">
-      <div class="window-title">
-        <h2>Skills.sys</h2>
-        <div class="window-controls">
-          <button class="control-button">_</button>
-          <button class="control-button">□</button>
-          <button class="control-button">×</button>
-        </div>
-      </div>
-      <div class="content">
-        <div class="skills-grid">
-          <div class="skill-folder">
-            <h3>Frontend</h3>
-            <div class="skill-items">
-              <div class="skill-item">HTML5</div>
-              <div class="skill-item">CSS3</div>
-              <div class="skill-item">JavaScript</div>
-              <div class="skill-item">React</div>
-            </div>
-          </div>
-          <div class="skill-folder">
-            <h3>Backend</h3>
-            <div class="skill-items">
-              <div class="skill-item">Node.js</div>
-              <div class="skill-item">Express</div>
-              <div class="skill-item">PostgreSQL</div>
-            </div>
-          </div>
-          <div class="skill-folder">
-            <h3>Tools</h3>
-            <div class="skill-items">
-              <div class="skill-item">Git</div>
-              <div class="skill-item">VS Code</div>
-              <div class="skill-item">Figma</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications" class="section window">
-      <div class="window-title">
-        <h2>Certifications.doc</h2>
-        <div class="window-controls">
-          <button class="control-button">_</button>
-          <button class="control-button">□</button>
-          <button class="control-button">×</button>
-        </div>
-      </div>
-      <div class="content">
-        <div class="cert-grid">
-          <div class="cert-item">
-            <h3>AWS Certified Developer</h3>
-            <p>Amazon Web Services</p>
-            <span class="cert-date">2023</span>
-          </div>
-          <div class="cert-item">
-            <h3>React Certification</h3>
-            <p>Meta Frontend Developer</p>
-            <span class="cert-date">2023</span>
-          </div>
+      <div class="content about-container">
+        <img class="about-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/me.jpeg" alt="Hannah Willoughby" class="profile-image">
+        <div>
+          <p>
+            Hello, world! It's me, Hannah. I'm a full-stack software engineer at OM1, Inc. I live in Fort Mill, SC with my partner Danny and our three cats: Poppy, Big Buddy, and Ray. You'll see a lot of references to Poppy in my projects!
+          </p>
+        <p>
+          Follow along as I grow in my software engineering skills, creativity, and career.
+        </p>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section window">
       <div class="window-title">
-        <h2>Projects.folder</h2>
+        <h2>Projects</h2>
         <div class="window-controls">
           <button class="control-button">_</button>
           <button class="control-button">□</button>
@@ -110,14 +62,152 @@ import Layout from '../layouts/Layout.astro';
       <div class="content">
         <div class="project-grid">
           <div class="project-item">
-            <h3>Weather App</h3>
-            <p>A cute weather app that shows the forecast with adorable illustrations.</p>
-            <button class="action-button">View Project</button>
+            <div class="project-image-container">
+              <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.10.12%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
+            </div>
+            <h3>Humble Cup Coffee Co.</h3>
+            <p>A website for a local coffee shop in Fort Mill, SC</p>
+            <a href="https://humble-cup-coffee-co.vercel.app/" class="action-button">View Project</a>
           </div>
           <div class="project-item">
-            <h3>Todo List</h3>
-            <p>An interactive to-do list with kawaii stickers as rewards.</p>
-            <button class="action-button">View Project</button>
+            <div class="project-image-container">
+              <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.25.30%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
+            </div>
+            <h3>Hannah's Hobby Room</h3>
+            <p>My personal blog</p>
+            <a href="https://hannahshobbyroom.com/" class="action-button">View Project</a>
+          </div>
+          <div class="project-item">
+            <div class="project-image-container">
+              <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.29.18%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
+            </div>
+            <h3>Whispering Willow Diary</h3>
+            <p>A journaling/diary website geared towards people with mood disorders.</p>
+            <a href="https://whisperingwillowdiary.com/" class="action-button">View Project</a>
+          </div>
+          <div class="project-item">
+            <h3>Hannah Dot Dev</h3>
+            <p>My personal projects page (this site!)</p>
+            <a href="https://hannahwilloughby.dev/" class="action-button">View Project</a>
+          </div>
+          <div class="project-item">
+            <div class="project-image-container">
+              <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.31.52%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
+            </div>
+            <h3>Tega Cay Animal Hospital</h3>
+            <p>A website for a local animal hospital in Tega Cay, SC.</p>
+            <a href="https://tcah-v2.vercel.app/" class="action-button">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section window">
+      <div class="window-title">
+        <h2>Skills</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="skills-grid">
+          <div class="skill-folder">
+            <h3>Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">Typescript</div>
+              <div class="skill-item">Python</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>Frameworks</h3>
+            <div class="skill-items">
+              <div class="skill-item">React</div>
+              <div class="skill-item">Next.js</div>
+              <div class="skill-item">Astro</div>
+              <div class="skill-item">Flask</div>
+              <div class="skill-item">Django</div>
+              <div class="skill-item">FastAPI</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>Databases</h3>
+            <div class="skill-items">
+              <div class="skill-item">PostgreSQL</div>
+              <div class="skill-item">Snowflake</div>
+              <div class="skill-item">MongoDB</div>
+              <div class="skill-item">AWS DynamoDB</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>AWS</h3>
+            <div class="skill-items">
+              <div class="skill-item">API Gateway</div>
+              <div class="skill-item">Lambda</div>
+              <div class="skill-item">ECS</div>
+              <div class="skill-item">S3</div>
+              <div class="skill-item">CodeBuild</div>
+              <div class="skill-item">CloudFormation</div>
+              <div class="skill-item">SES</div>
+              <div class="skill-item">DMS</div>
+              <div class="skill-item">Cloudfront</div>
+              <div class="skill-item">Fargate</div>
+              <div class="skill-item">ECR</div>
+              <div class="skill-item">CodePipeline</div>
+              <div class="skill-item">CodeDeploy</div>
+              <div class="skill-item">Route 53</div>
+              <div class="skill-item">SNS</div>
+              <div class="skill-item">SQS</div>
+              <div class="skill-item">CloudWatch</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>DevOps & Infrastructure</h3>
+            <div class="skill-items">
+              <div class="skill-item">Terraform</div>
+              <div class="skill-item">Docker</div>
+              <div class="skill-item">Jenkins</div>
+              <div class="skill-item">nginx</div>
+            </div>
+          </div>
+          <div class="skill-folder">
+            <h3>Packages / Other</h3>
+            <div class="skill-items">
+              <div class="skill-item">Celery</div>
+              <div class="skill-item">Auth0</div>
+              <div class="skill-item">Keycloak</div>
+              <div class="skill-item">Highcharts</div>
+              <div class="skill-item">Redux/Saga</div>
+              <div class="skill-item">Clerk</div>
+              <div class="skill-item">tRPC</div>
+              <div class="skill-item">Tailwind</div>
+              <div class="skill-item">Drizzle</div>
+              <div class="skill-item">React Query</div>
+              <div class="skill-item">SQLAlchemy</div>
+              <div class="skill-item">three.js/react-three-fiber</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section window">
+      <div class="window-title">
+        <h2>Certifications</h2>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">×</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="cert-grid">
+          <div class="cert-item">
+            <h3>AWS Certified Developer Associate</h3>
+            <p>Amazon Web Services</p>
+            <span class="cert-date">2023</span>
           </div>
         </div>
       </div>
@@ -125,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
 
     <section id="contact" class="section window">
       <div class="window-title">
-        <h2>Contact.exe</h2>
+        <h2>Contact</h2>
         <div class="window-controls">
           <button class="control-button">_</button>
           <button class="control-button">□</button>
@@ -134,7 +224,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="content">
         <div class="contact-links">
-          <a href="mailto:your@email.com" class="action-button">
+          <a href="mailto:hannah@hannahwilloughby.dev" class="action-button">
             Email Me
           </a>
           <a href="https://github.com" target="_blank" class="action-button">
@@ -142,6 +232,9 @@ import Layout from '../layouts/Layout.astro';
           </a>
           <a href="https://linkedin.com" target="_blank" class="action-button">
             LinkedIn
+          </a>
+          <a href="https://goodreads.com" target="_blank" class="action-button">
+            Goodreads
           </a>
         </div>
       </div>
@@ -161,26 +254,54 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .content {
-    padding: 8px;
+    padding: 16px;
   }
 
   #hero {
     text-align: center;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
+    padding-bottom: 16px;
   }
 
   #hero h1 {
     font-size: 3rem;
     margin: 2rem 0 1rem;
     color: var(--text);
+    font-family: "Gluten Variable", sans-serif;
   }
 
   .subtitle {
     font-size: 1.5rem;
     margin: 1rem 0;
     color: var(--text);
+  }
+
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .profile-image {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .skills-grid {
@@ -190,7 +311,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .skill-folder {
-    background: var(--button-face);
+    background: var(--primary);
     padding: 8px;
     border-top: 2px solid var(--button-highlight);
     border-left: 2px solid var(--button-highlight);
@@ -212,7 +333,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .skill-item {
-    background: var(--pink-bg);
+    background: var(--primary-dark);
     padding: 4px 8px;
     border-top: 1px solid var(--button-highlight);
     border-left: 1px solid var(--button-highlight);
@@ -229,12 +350,24 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .cert-item, .project-item {
-    background: var(--button-face);
+    background: var(--primary);
     padding: 12px;
     border-top: 2px solid var(--button-highlight);
     border-left: 2px solid var(--button-highlight);
     border-right: 2px solid var(--button-shadow);
     border-bottom: 2px solid var(--button-shadow);
+  }
+
+  .project-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-image {
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 12px;
   }
 
   .cert-item h3, .project-item h3 {
@@ -259,7 +392,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .action-button {
-    background: var(--button-face);
+    background: var(--secondary);
     border-top: 2px solid var(--button-highlight);
     border-left: 2px solid var(--button-highlight);
     border-right: 2px solid var(--button-shadow);
