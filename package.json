@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.0.8",
     "@fontsource-variable/gluten": "^5.1.1",
     "@fontsource/caveat": "^5.0.16",
     "@fontsource/gloria-hallelujah": "^5.1.1",
