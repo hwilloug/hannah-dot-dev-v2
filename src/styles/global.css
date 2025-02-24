@@ -106,10 +106,10 @@ footer {
 
 .window {
   background: var(--primary-light);
-  border-top: 2px solid var(--button-highlight);
-  border-left: 2px solid var(--button-highlight);
-  border-right: 2px solid var(--button-deep-shadow);
-  border-bottom: 2px solid var(--button-deep-shadow);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
   box-shadow: inset -2px -2px var(--button-shadow), inset 2px 2px var(--button-highlight);
 }
 
@@ -124,11 +124,11 @@ footer {
 
 .window-title h2 {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 0 4px;
-  color: black;
-  font-family: "MS Sans Serif", "Quicksand", sans-serif;
+  color: white;
+  font-family: "Gluten Variable", "MS Sans Serif", "Quicksand", sans-serif;
 }
 
 .window-controls {
@@ -138,19 +138,33 @@ footer {
 
 .control-button {
   width: 16px;
-  height: 14px;
-  background: var(--primary-dark);
+  height: 16px;
+  color: var(--primary-dark);
+  font-weight: bold;
   border-top: 1px solid var(--secondary);
   border-left: 1px solid var(--secondary);
   border-right: 1px solid var(--secondary-dark);
   border-bottom: 1px solid var(--secondary-dark);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9px;
+  font-size: 16px;
   line-height: 1;
   padding: 0;
   cursor: pointer;
+}
+
+.control-button.green {
+  background: #c1e3c8;
+}
+
+.control-button.pink {
+  background: #e3c1e0;
+}
+
+.control-button.yellow {
+  background: #f7e394;
 }
 
 .control-button:active {
@@ -220,6 +234,7 @@ footer {
   width: 200px;
   object-fit: cover;
   border-radius: 50%;
+  border: 6px solid var(--secondary-dark);
 }
 
 .skills-grid {
@@ -231,10 +246,10 @@ footer {
 .skill-folder {
   background: var(--primary);
   padding: 8px;
-  border-top: 2px solid var(--button-highlight);
-  border-left: 2px solid var(--button-highlight);
-  border-right: 2px solid var(--button-shadow);
-  border-bottom: 2px solid var(--button-shadow);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
 }
 
 .skill-folder h3 {
@@ -248,15 +263,16 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 8px;
+  color: white;
 }
 
 .skill-item {
   background: var(--primary-dark);
   padding: 4px 8px;
-  border-top: 1px solid var(--button-highlight);
-  border-left: 1px solid var(--button-highlight);
-  border-right: 1px solid var(--button-shadow);
-  border-bottom: 1px solid var(--button-shadow);
+  border-top: 1px solid var(--primary-dark);
+  border-left: 1px solid var(--primary-dark);
+  border-right: 1px solid var(--primary-dark);
+  border-bottom: 1px solid var(--primary-dark);
   font-size: 0.9rem;
   text-align: center;
 }
@@ -270,19 +286,19 @@ footer {
 .cert-item, .project-item {
   background: var(--primary);
   padding: 12px;
-  border-top: 2px solid var(--button-highlight);
-  border-left: 2px solid var(--button-highlight);
-  border-right: 2px solid var(--button-shadow);
-  border-bottom: 2px solid var(--button-shadow);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
 }
 
 .cert-item {
   background: var(--primary);
   padding: 12px;
-  border-top: 2px solid var(--button-highlight);
-  border-left: 2px solid var(--button-highlight);
-  border-right: 2px solid var(--button-shadow);
-  border-bottom: 2px solid var(--button-shadow);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -304,6 +320,7 @@ footer {
   height: 300px;
   object-fit: cover;
   margin-bottom: 12px;
+  max-width: 100%;
 }
 
 .cert-item h3, .project-item h3 {
@@ -329,10 +346,10 @@ footer {
 
 .action-button {
   background: var(--secondary);
-  border-top: 2px solid var(--button-highlight);
-  border-left: 2px solid var(--button-highlight);
-  border-right: 2px solid var(--button-shadow);
-  border-bottom: 2px solid var(--button-shadow);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
   padding: 4px 12px;
   font-family: "MS Sans Serif", "Quicksand", sans-serif;
   font-size: 0.9rem;
@@ -342,10 +359,10 @@ footer {
 }
 
 .action-button:active {
-  border-top: 2px solid var(--button-shadow);
-  border-left: 2px solid var(--button-shadow);
-  border-right: 2px solid var(--button-highlight);
-  border-bottom: 2px solid var(--button-highlight);
+  border-top: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
   padding: 5px 11px 3px 13px;
 }
 
