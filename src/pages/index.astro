@@ -16,13 +16,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="content">
         <h1>Welcome!</h1>
+        <h2 class="header-name">Hannah Willoughby</h2>
         <p class="subtitle">Full Stack Software Engineer</p>
         <p class="subtitle">Creative</p>
-        <div class="profile-image-container">
-          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/poppy.png" alt="Poppy" class="profile-image">
-          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/buddy_face.png" alt="Big Buddy" class="profile-image">
-          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/tiger_face.png" alt="Tiger" class="profile-image">
-          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/ray_face.png" alt="Ray" class="profile-image">
+        <div class="profile-image-container mt-4">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/poppy.png" alt="Poppy" class="profile-image h-16 w-16 sm:h-24 sm:w-24">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/buddy_face.png" alt="Big Buddy" class="profile-image h-16 w-16 sm:h-24 sm:w-24">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/tiger_face.png" alt="Tiger" class="profile-image h-16 w-16 sm:h-24 sm:w-24">
+          <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/ray_face.png" alt="Ray" class="profile-image h-16 w-16 sm:h-24 sm:w-24">
         </div>
 
       </div>
@@ -61,43 +62,38 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="content">
         <div class="project-grid">
-          <div class="project-item">
+          <a href="https://humble-cup-coffee-co.vercel.app/" target="_blank" class="project-item">
             <div class="project-image-container">
               <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.10.12%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
             </div>
             <h3>Humble Cup Coffee Co.</h3>
             <p>A website for a local coffee shop in Fort Mill, SC</p>
-            <a href="https://humble-cup-coffee-co.vercel.app/" class="action-button">View Project</a>
-          </div>
-          <div class="project-item">
+          </a>
+          <a href="https://hannahshobbyroom.com/" target="_blank" class="project-item">
             <div class="project-image-container">
               <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.25.30%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
             </div>
             <h3>Hannah's Hobby Room</h3>
             <p>My personal blog</p>
-            <a href="https://hannahshobbyroom.com/" class="action-button">View Project</a>
-          </div>
-          <div class="project-item">
+          </a>
+          <a href="https://whisperingwillowdiary.com/" target="_blank" class="project-item">
             <div class="project-image-container">
               <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.29.18%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
             </div>
             <h3>Whispering Willow Diary</h3>
             <p>A journaling/diary website geared towards people with mood disorders.</p>
-            <a href="https://whisperingwillowdiary.com/" class="action-button">View Project</a>
-          </div>
-          <div class="project-item">
+          </a>
+          <a href="https://hannahwilloughby.dev/" target="_blank" class="project-item">
             <h3>Hannah Dot Dev</h3>
             <p>My personal projects page (this site!)</p>
-            <a href="https://hannahwilloughby.dev/" class="action-button">View Project</a>
-          </div>
-          <div class="project-item">
+          </a>
+          <a href="https://tcah-v2.vercel.app/" target="_blank" class="project-item">
             <div class="project-image-container">
               <img class="project-image" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.31.52%E2%80%AFPM.png" alt="Humble Cup Coffee Co. Website">
             </div>
             <h3>Tega Cay Animal Hospital</h3>
             <p>A website for a local animal hospital in Tega Cay, SC.</p>
-            <a href="https://tcah-v2.vercel.app/" class="action-button">View Project</a>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -205,9 +201,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="content">
         <div class="cert-grid">
           <div class="cert-item">
-            <h3>AWS Certified Developer Associate</h3>
-            <p>Amazon Web Services</p>
-            <span class="cert-date">2023</span>
+            <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/developer_associate_logo.png" alt="AWS Logo" class="cert-logo">
+            <div class="cert-info">
+              <h3>AWS Certified Developer Associate</h3>
+              <p>Amazon Web Services</p>
+              <span class="cert-date">2023</span>
+            </div>
           </div>
         </div>
       </div>
@@ -241,190 +240,3 @@ import Layout from '../layouts/Layout.astro';
     </section>
   </div>
 </Layout>
-
-<style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .section {
-    margin: 2rem 0;
-  }
-
-  .content {
-    padding: 16px;
-  }
-
-  #hero {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 16px;
-  }
-
-  #hero h1 {
-    font-size: 3rem;
-    margin: 2rem 0 1rem;
-    color: var(--text);
-    font-family: "Gluten Variable", sans-serif;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: var(--text);
-  }
-
-  .profile-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .profile-image {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-  }
-
-  .about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .about-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .skill-folder {
-    background: var(--primary);
-    padding: 8px;
-    border-top: 2px solid var(--button-highlight);
-    border-left: 2px solid var(--button-highlight);
-    border-right: 2px solid var(--button-shadow);
-    border-bottom: 2px solid var(--button-shadow);
-  }
-
-  .skill-folder h3 {
-    margin: 0 0 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: "MS Sans Serif", "Quicksand", sans-serif;
-  }
-
-  .skill-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 8px;
-  }
-
-  .skill-item {
-    background: var(--primary-dark);
-    padding: 4px 8px;
-    border-top: 1px solid var(--button-highlight);
-    border-left: 1px solid var(--button-highlight);
-    border-right: 1px solid var(--button-shadow);
-    border-bottom: 1px solid var(--button-shadow);
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
-  .cert-grid, .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-
-  .cert-item, .project-item {
-    background: var(--primary);
-    padding: 12px;
-    border-top: 2px solid var(--button-highlight);
-    border-left: 2px solid var(--button-highlight);
-    border-right: 2px solid var(--button-shadow);
-    border-bottom: 2px solid var(--button-shadow);
-  }
-
-  .project-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .project-image {
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 12px;
-  }
-
-  .cert-item h3, .project-item h3 {
-    margin: 0 0 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: "MS Sans Serif", "Quicksand", sans-serif;
-  }
-
-  .cert-date {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--text);
-    margin-top: 8px;
-  }
-
-  .contact-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .action-button {
-    background: var(--secondary);
-    border-top: 2px solid var(--button-highlight);
-    border-left: 2px solid var(--button-highlight);
-    border-right: 2px solid var(--button-shadow);
-    border-bottom: 2px solid var(--button-shadow);
-    padding: 4px 12px;
-    font-family: "MS Sans Serif", "Quicksand", sans-serif;
-    font-size: 0.9rem;
-    color: var(--text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .action-button:active {
-    border-top: 2px solid var(--button-shadow);
-    border-left: 2px solid var(--button-shadow);
-    border-right: 2px solid var(--button-highlight);
-    border-bottom: 2px solid var(--button-highlight);
-    padding: 5px 11px 3px 13px;
-  }
-
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 2rem;
-    }
-
-    .contact-links {
-      flex-direction: column;
-    }
-
-    .action-button {
-      width: 100%;
-      text-align: center;
-    }
-  }
-</style>

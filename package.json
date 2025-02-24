@@ -12,7 +12,10 @@
   "dependencies": {
     "@fontsource-variable/gluten": "^5.1.1",
     "@fontsource/caveat": "^5.0.16",
+    "@fontsource/gloria-hallelujah": "^5.1.1",
     "@fontsource/quicksand": "^5.0.16",
-    "astro": "^5.2.5"
+    "@tailwindcss/vite": "^4.0.8",
+    "astro": "^5.2.5",
+    "tailwindcss": "^4.0.8"
   }
 }
