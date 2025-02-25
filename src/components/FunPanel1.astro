@@ -4,12 +4,23 @@ import WindowButtons from "./WindowButtons.astro";
 
 ---
 
-<div class="window">
-  <div class="window-title">
-    <h2>Strawberry Plant</h2>
-    <WindowButtons />
+<div class="relative self-start h-full flex md:block gap-4 items-center">
+  <div class="window lg:w-5/6 md:w-full sm:w-1/2">
+    <div class="window-title">
+      <h2>Farm</h2>
+      <WindowButtons />
+    </div>
+    <div class="content flex justify-center items-center">
+      <img class="" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/cows-sheep-chickens.png" alt="Farm animals">
+    </div>
   </div>
-  <div class="content flex justify-center items-center">
-    <img class="w-3/4" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/strawberry-plant.png" alt="Hannah Willoughby" class="profile-image">
+  <div class="window lg:w-1/2 md:w-3/5 md:absolute block lg:bottom-0 bottom-0 right-0">
+    <div class="window-title">
+      <h2>Strawberries</h2>
+      <WindowButtons />
+    </div>
+    <div class="content flex justify-center items-center">
+      <img class="w-full" src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/strawberry-plant.png" alt="Hannah Willoughby">
+    </div>
   </div>
 </div>
