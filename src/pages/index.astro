@@ -2,6 +2,8 @@
 import About from '../components/About.astro';
 import Certifications from '../components/Certifications.astro';
 import Contact from '../components/Contact.astro';
+import FunPanel1 from '../components/FunPanel1.astro';
+import FunPanel2 from '../components/FunPanel2.astro';
 import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 import Welcome from '../components/Welcome.astro';
@@ -12,10 +14,16 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <div class="container">
     <Welcome />
-    <About />
+    <div class="grid grid-cols-1 sm:grid-cols-[2fr_1fr] sm:gap-4 items-center">
+      <About />
+      <FunPanel1 />
+    </div>
     <Projects />
+    <div class="grid grid-cols-1 sm:grid-cols-[1fr_2fr] sm:gap-4 items-center">
+      <FunPanel2 />
+      <Certifications />
+    </div>
     <Skills />
-    <Certifications />
     <Contact />
   </div>
 </Layout>
