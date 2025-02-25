@@ -63,8 +63,15 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 1rem;
-  color: white;
+  gap: 0.25rem;
+  color: rgb(255, 200, 99);
+  font-weight: bold;
+  font-family: "Gluten Variable", "MS Sans Serif", "Quicksand", sans-serif;
+  text-shadow: 
+    1px 1px var(--primary-darker),
+    -1px -1px var(--primary-darker),
+    1px -1px var(--primary-darker),
+    -1px 1px var(--primary-darker);
 }
 
 .nav-links a {
@@ -122,7 +129,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: white;
 }
 
 .window-title h2 {
@@ -130,7 +136,12 @@ footer {
   font-size: 1rem;
   font-weight: bold;
   padding: 0 4px;
-  color: white;
+  color: rgb(255, 200, 99);
+  text-shadow: 
+    1px 1px var(--primary-darker),
+    -1px -1px var(--primary-darker),
+    1px -1px var(--primary-darker),
+    -1px 1px var(--primary-darker);
   font-family: "Gluten Variable", "MS Sans Serif", "Quicksand", sans-serif;
 }
 
