@@ -7,6 +7,7 @@
   --primary: #d6ce93;
   --primary-light: #efebce;
   --primary-dark: #a3a380;
+  --primary-darker: #737353;
 }
 
 * {
@@ -63,6 +64,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 1rem;
+  color: white;
 }
 
 .nav-links a {
@@ -111,6 +113,7 @@ footer {
   border-right: 2px solid var(--primary-dark);
   border-bottom: 2px solid var(--primary-dark);
   box-shadow: inset -2px -2px var(--button-shadow), inset 2px 2px var(--button-highlight);
+  border-radius: 8px;
 }
 
 .window-title {
@@ -250,6 +253,7 @@ footer {
   border-left: 2px solid var(--primary-dark);
   border-right: 2px solid var(--primary-dark);
   border-bottom: 2px solid var(--primary-dark);
+  border-radius: 8px;
 }
 
 .skill-folder h3 {
@@ -275,6 +279,7 @@ footer {
   border-bottom: 1px solid var(--primary-dark);
   font-size: 0.9rem;
   text-align: center;
+  border-radius: 8px;
 }
 
 .cert-grid, .project-grid {
@@ -290,6 +295,7 @@ footer {
   border-left: 2px solid var(--primary-dark);
   border-right: 2px solid var(--primary-dark);
   border-bottom: 2px solid var(--primary-dark);
+  border-radius: 8px;
 }
 
 .cert-item {
@@ -356,6 +362,7 @@ footer {
   color: var(--text);
   text-decoration: none;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .action-button:active {
