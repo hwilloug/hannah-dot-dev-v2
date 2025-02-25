@@ -16,7 +16,9 @@ const projects = [
       <p>I chose Next.js because it will give me the flexibility to add server-side features in the future, such as ordering online. Otherwise, I would have chosen Astro, as that performs better for SEO and static sites.</p>
       <p>I used Tailwind CSS for styling, and Shadcn/UI for components. I used Vercel for deployment since it's free and links right up to my GitHub repo.</p>
       <p>I designed some of the graphics myself, such as the coffee bean dividers and the plant images.</p>
-      <p></p>
+      <p>I added parallax scrolling to the home page on larger screens to give the site a bit more depth and personality. I did this by creating a hook for monitoring the scroll position and then using that to set the background position of the images.</p>
+      <p class="line-through">Blurb on image optimization</p>
+      <p class="line-through">Blurb on SEO</p>
     `
   },
   {
@@ -25,7 +27,15 @@ const projects = [
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.25.30%E2%80%AFPM.png",
     link: "https://hannahshobbyroom.com/",
     githubLink: "https://github.com/hwilloug/hannahs-hobby-room",
-    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    techStack: ["Astro", "Tailwind CSS", "Shadcn/UI", "Clerk", "Vercel", "AWS Lambda", "AWS SES"],
+    body: `
+      <p>This project has been a work in progress for a long time. I started it in 2021 when I barely knew anything about web development, and I've iterated on it many times since. This is the third version of the site.</p>
+      <p>I chose Astro because I wanted a mostly static site that would perform well for SEO. I also just wanted to learn more about the framework.</p>
+      <p>Since Astro isn't meant for server-side rendering, I had to do some fanangaling using server:defer to get the site to work with Clerk authentication, likes, and comments. See more about this on <a class="underline text-orange-500" href="https://hannahshobbyroom.com/blog/hannahs-hobby-room-refactor-to-astro/" target="_blank" rel="noopener noreferrer">my blog post</a>.</p>
+      <p>Astro makes it super simple to add new articles, especially compared to the previous implementation where I was writing all my articles in React. With Astro, I can use markdown files and have the content automatically converted to HTML along with proper metadata.</p>
+      <p>There are some legacy elements in the infrastructure of the site, such as some metadata being stored in AWS Aurora DB, and I am working on migrating it to be hosted on Vercel. The newsletter is also stored in AWS still and is sent out using Lambda and SES.</p>
+      <p>Bonus info from previous versions: I had some fun with creating a 3D model of my actual hobby room using three.js and react-three-fiber. I added easter eggs to the model that will take you to different parts of the site. Unfortunately, I took down the model with V3. It wasn't optimized for mobile, took forever to load, and I didn't have the skills in Blender to optimize it, but it was a fun learning experience.</p>
+    `
   },
   {
     title: "Whispering Willow Diary",
@@ -41,7 +51,7 @@ const projects = [
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-25+at+1.34.34%E2%80%AFPM.png",
     link: "https://hannahwilloughby.dev/",
     githubLink: "https://github.com/hwilloug/hannah-dot-dev-v2",
-    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    techStack: ["Astro", "Tailwind CSS", "Shadcn/UI", "Vercel"],
   },
   {
     title: "Tega Cay Animal Hospital",
@@ -63,23 +73,26 @@ const projects = [
           <WindowButtons />
       </div>
       <div class="content">
-        <a class="float-left mr-4 mb-4" href={project.link} target="_blank" rel="noopener noreferrer">
-          <img class="project-image" src={project.image} alt={project.title} />
-        </a>
-        <StarHeader title={project.title} />
-        <p class="mb-4">{project.description}</p>
-        <div class="flex gap-2 items-center mb-4">
-          <p>Tech Stack:</p>
-          {
-            project.techStack.map((tech) => (
-              <p class="bg-orange-300 px-2 py-1 rounded-md">{tech}</p>
-            ))
-          }
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+          <a class="mr-4 mb-4" href={project.link} target="_blank" rel="noopener noreferrer">
+            <img class="project-image w-full" src={project.image} alt={project.title} />
+          </a>
+          <div>
+            <StarHeader title={project.title} />
+            <p class="mb-4">{project.description}</p>
+            <div class="flex flex-wrap gap-2 items-center mb-4">
+              {
+                project.techStack.map((tech) => (
+                  <p class="bg-orange-300 px-2 py-1 rounded-md">{tech}</p>
+                ))
+              }
+            </div>
+          </div>
         </div>
         {project.body && <div class="flex flex-col gap-4" set:html={project.body} />}
         <div class="flex justify-end gap-2 mt-8">
           <a class="action-button" href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-          <a class="action-button" href={project.githubLink} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a class="action-button" href={project.githubLink} target="_blank" rel="noopener noreferrer">View Source Code</a>
         </div>
         </div>
       </div>
