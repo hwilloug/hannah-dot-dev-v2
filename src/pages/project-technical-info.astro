@@ -1,0 +1,88 @@
+---
+import StarHeader from "../components/StarHeader.astro";
+import WindowButtons from "../components/WindowButtons.astro";
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+  {
+    title: "Humble Cup Coffee Co.",
+    description: "A website for a local coffee shop in Fort Mill, SC.",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.10.12%E2%80%AFPM.png",
+    link: "https://humble-cup-coffee-co.vercel.app/",
+    githubLink: "https://github.com/hwilloug/humble-cup-coffee-co",
+    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    body: `
+      <p>I started this project by prompting Bolt.new to build a website for a coffee shop given some parameters. I wanted ease of use and mobile optimization, but I also wanted to capture the feel of the shop itself. Taking what Bolt.new gave me, I changed the layout to be more relevant to the shop, and added new features and pages.</p>
+      <p>I chose Next.js because it will give me the flexibility to add server-side features in the future, such as ordering online. Otherwise, I would have chosen Astro, as that performs better for SEO and static sites.</p>
+      <p>I used Tailwind CSS for styling, and Shadcn/UI for components. I used Vercel for deployment since it's free and links right up to my GitHub repo.</p>
+      <p>I designed some of the graphics myself, such as the coffee bean dividers and the plant images.</p>
+      <p></p>
+    `
+  },
+  {
+    title: "Hannah's Hobby Room",
+    description: "My personal blog",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.25.30%E2%80%AFPM.png",
+    link: "https://hannahshobbyroom.com/",
+    githubLink: "https://github.com/hwilloug/hannahs-hobby-room",
+    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+  },
+  {
+    title: "Whispering Willow Diary",
+    description: "A journaling/diary website geared toward people with mood disorders.",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.29.18%E2%80%AFPM.png",
+    link: "https://whisperingwillowdiary.com/",
+    githubLink: "https://github.com/hwilloug/whispering-willow-diary-v3",
+    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+  },
+  {
+    title: "Hannah Dot Dev",
+    description: "My personal portfolio website",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-25+at+1.34.34%E2%80%AFPM.png",
+    link: "https://hannahwilloughby.dev/",
+    githubLink: "https://github.com/hwilloug/hannah-dot-dev-v2",
+    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+  },
+  {
+    title: "Tega Cay Animal Hospital",
+    description: "A website for a local animal hospital in Tega Cay, SC.",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.31.52%E2%80%AFPM.png",
+    link: "https://tcah-v2.vercel.app/",
+    githubLink: "https://github.com/hwilloug/tcah-v2",
+    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+  },
+];
+---
+
+<Layout title="Project Technical Information">
+  <div class="container flex flex-col gap-8">
+    {projects.map((project) => (
+      <div class="window">
+        <div class="window-title">
+          <h2>{project.title}</h2>
+          <WindowButtons />
+      </div>
+      <div class="content">
+        <a class="float-left mr-4 mb-4" href={project.link} target="_blank" rel="noopener noreferrer">
+          <img class="project-image" src={project.image} alt={project.title} />
+        </a>
+        <StarHeader title={project.title} />
+        <p class="mb-4">{project.description}</p>
+        <div class="flex gap-2 items-center mb-4">
+          <p>Tech Stack:</p>
+          {
+            project.techStack.map((tech) => (
+              <p class="bg-orange-300 px-2 py-1 rounded-md">{tech}</p>
+            ))
+          }
+        </div>
+        {project.body && <div class="flex flex-col gap-4" set:html={project.body} />}
+        <div class="flex justify-end gap-2 mt-8">
+          <a class="action-button" href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+          <a class="action-button" href={project.githubLink} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</Layout>
