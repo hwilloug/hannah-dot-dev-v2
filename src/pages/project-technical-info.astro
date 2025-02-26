@@ -14,7 +14,7 @@ const projects = [
     body: `
       <p>I started this project by prompting Bolt.new to build a website for a coffee shop given some parameters. I wanted ease of use and mobile optimization, but I also wanted to capture the feel of the shop itself. Taking what Bolt.new gave me, I changed the layout to be more relevant to the shop, and added new features and pages.</p>
       <p>I chose Next.js because it will give me the flexibility to add server-side features in the future, such as ordering online. Otherwise, I would have chosen Astro, as that performs better for SEO and static sites.</p>
-      <p>I used Tailwind CSS for styling, and Shadcn/UI for components. I used Vercel for deployment since it's free and links right up to my GitHub repo.</p>
+      <p>I used Tailwind CSS for styling, and Shadcn/UI for basic components. I used Vercel for deployment since it's free and links right up to my GitHub repo.</p>
       <p>I designed some of the graphics myself, such as the coffee bean dividers and the plant images.</p>
       <p>I added parallax scrolling to the home page on larger screens to give the site a bit more depth and personality. I did this by creating a hook for monitoring the scroll position and then using that to set the background position of the images.</p>
       <p class="line-through">Blurb on image optimization</p>
@@ -43,9 +43,9 @@ const projects = [
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.29.18%E2%80%AFPM.png",
     link: "https://whisperingwillowdiary.com/",
     githubLink: "https://github.com/hwilloug/whispering-willow-diary-v3",
-    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    techStack: ["Next.js", "tRPC", "Drizzle", "Tailwind CSS", "Shadcn/UI", "Vercel"],
     body: `
-      <p>This is the third version of the Whispering Willow Diary. I started it in 2023 when I barely knew anything about web development, and I've iterated on it many times since. This is the third version of the site.</p>
+      <p>I started this project in 2023 when I was just a baby developer, and I've iterated on it many times since. This is the third version of the site.</p>
     `
   },
   {
@@ -54,15 +54,18 @@ const projects = [
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-25+at+1.34.34%E2%80%AFPM.png",
     link: "https://hannahwilloughby.dev/",
     githubLink: "https://github.com/hwilloug/hannah-dot-dev-v2",
-    techStack: ["Astro", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    techStack: ["Astro", "Tailwind CSS", "Vercel"],
+    body: `
+      <p></p>
+    `
   },
   {
     title: "Tega Cay Animal Hospital",
     description: "A website for a local animal hospital in Tega Cay, SC.",
-    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.31.52%E2%80%AFPM.png",
-    link: "https://tcah-v2.vercel.app/",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-26+at+6.48.14%E2%80%AFPM.png",
+    link: "https://tcah.vercel.app/",
     githubLink: "https://github.com/hwilloug/tcah-v2",
-    techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    techStack: ["Astro", "Tailwind CSS", "Vercel"],
   },
 ];
 ---
