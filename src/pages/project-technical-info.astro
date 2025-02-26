@@ -44,6 +44,9 @@ const projects = [
     link: "https://whisperingwillowdiary.com/",
     githubLink: "https://github.com/hwilloug/whispering-willow-diary-v3",
     techStack: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Vercel"],
+    body: `
+      <p>This is the third version of the Whispering Willow Diary. I started it in 2023 when I barely knew anything about web development, and I've iterated on it many times since. This is the third version of the site.</p>
+    `
   },
   {
     title: "Hannah Dot Dev",
@@ -75,7 +78,7 @@ const projects = [
       <div class="content">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
           <a class="mr-4 mb-4" href={project.link} target="_blank" rel="noopener noreferrer">
-            <img class="project-image w-full" src={project.image} alt={project.title} />
+            <img class="project-image w-full object-top" src={project.image} alt={project.title} />
           </a>
           <div>
             <StarHeader title={project.title} />

@@ -4,6 +4,7 @@ import '@fontsource/quicksand/700.css';
 import '@fontsource/caveat/400.css';
 import '@fontsource-variable/gluten';
 import '../styles/global.css';
+import NavBar from '../components/NavBar.astro';
 
 interface Props {
   title?: string;
@@ -22,18 +23,7 @@ const { title = "Hannah Willoughby's Portfolio" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav>
-      <div class="nav-content">
-        <div />
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </nav>
+    <NavBar />
     <main>
       <slot />
     </main>

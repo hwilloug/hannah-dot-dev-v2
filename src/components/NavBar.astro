@@ -1,0 +1,125 @@
+---
+
+---
+<nav>
+  <div class="nav-content">
+    <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/poppy_face.png" alt="Poppy" class="w-12 h-12">
+    <div class="nav-links hidden sm:!flex">
+      <a href="/#about">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#certifications">Certifications</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <button class="nav-toggle block sm:hidden" onclick="toggleNav()">
+      <img src="https://hannahdotdev-images.s3.us-east-1.amazonaws.com/arrow.png" alt="Plus" class="bar text-5xl hover:cursor-pointer w-6 h-6">
+    </button>
+  </div>
+  <div class="nav-links-mobile-container hidden">
+    <div class="nav-links-mobile">
+      <a href="/#about" onclick="toggleNav()">About</a>
+      <a href="/#projects" onclick="toggleNav()">Projects</a>
+      <a href="/#skills" onclick="toggleNav()">Skills</a>
+      <a href="/#certifications" onclick="toggleNav()">Certifications</a>
+      <a href="/#contact" onclick="toggleNav()">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  function toggleNav() {
+    const navLinksMobileContainer = document.querySelector('.nav-links-mobile-container');
+    navLinksMobileContainer?.classList.toggle('hidden');
+    const navToggle = document.querySelector('.nav-toggle');
+    navToggle?.classList.toggle('rotate-180');
+  }
+</script>
+
+<style>
+nav {
+  background-color: var(--primary-dark);
+  border-top: 2px solid var(--secondary);
+  
+  border-left: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary-dark);
+  border-bottom: 2px solid var(--secondary-dark);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: 2px solid transparent;
+}
+
+.nav-links {
+  gap: 0.25rem;
+  color: rgb(255, 200, 99);
+  font-weight: bold;
+  font-family: "Gluten Variable", "MS Sans Serif", "Quicksand", sans-serif;
+  text-shadow: 
+    1px 1px var(--primary-darker),
+    -1px -1px var(--primary-darker),
+    1px -1px var(--primary-darker),
+    -1px 1px var(--primary-darker);
+}
+
+.nav-links-mobile-container {}
+
+.nav-links-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--primary-dark);
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 4px 8px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+}
+
+.nav-links-mobile a {
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  background-color: var(--primary-darker);
+  border-bottom: 2px solid var(--primary-dark);
+  border-top: 2px solid var(--primary-dark);
+  text-align: center;
+  width: 100%;
+}
+
+.nav-links a:hover {
+  border-top: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary-dark);
+  border-bottom: 2px solid var(--secondary-dark);
+}
+
+.nav-links a:active {
+  border-top: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary-dark);
+  border-bottom: 2px solid var(--secondary-dark);
+  padding: 5px 7px 3px 9px;
+}
+</style>
