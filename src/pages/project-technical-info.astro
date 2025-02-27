@@ -46,6 +46,12 @@ const projects = [
     techStack: ["Next.js", "tRPC", "Drizzle", "Tailwind CSS", "Shadcn/UI", "Vercel"],
     body: `
       <p>I started this project in 2023 when I was just a baby developer, and I've iterated on it many times since. This is the third version of the site.</p>
+      <p>The functionality of the site has been consistent: users can sign up to create their own journal, and inside the app they can write entries, track mood, track sleep, set goals, and more.</p>
+      <p>I chose Next.js because it gave me the tools to build a full-stack application with authentication and server-side rendering. I also just wanted to learn more about the framework. I learned a lot about tRPC and Drizzle, and it makes me excited about how powerful the framework can be.</p>
+      <p>The database has also gone through many iterations. I started with AWS Dynamo DB because I thought, "Oh, a journal, makes sense for it to be stored in a document database." However, once I realized I wanted querying capabilities, I switched to PostgreSQL. I did a migration using Airflow to Vercel postgres since I was already using Vercel for deployment. Now, the data can be queried much more easily and quickly.</p>
+      <p>The authentication has changed since the start as well. At first, I was using Auth0, but I found it to be a bit overkill for what I needed. I switched to Clerk, and it's been a great fit. It is much simpler to get set up, and the free tier is more than enough for what I need.</p>
+      <p>The initial deployment pipeline was a bit of a controlled mess. I was using AWS CodePipeline, which deployed my infrastructure and frontend packages separately. I really did not like writing and maintaining the pipeline and its buildspec, so I switched to Vercel, which requires minimal setup.</p>
+      <p>I've learned a lot about the framework and how to make it work for me. I'm excited to continue iterating on this project and making it even better.</p>
     `
   },
   {
@@ -68,6 +74,11 @@ const projects = [
     link: "https://tcah.vercel.app/",
     githubLink: "https://github.com/hwilloug/tcah-v2",
     techStack: ["Astro", "Tailwind CSS", "Vercel"],
+    body: `
+      <p>This is basically just an AI generated site. I used Bolt.new for the initial build, then I adjusted it slightly to fit the needs of the client.</p>
+      <p>I chose Astro because it's a static site and performs well for SEO.</p>
+      <p>I used Vercel for deployment since it's free and links right up to my GitHub repo.</p>
+    `
   },
 ];
 ---
