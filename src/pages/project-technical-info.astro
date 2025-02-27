@@ -56,7 +56,9 @@ const projects = [
     githubLink: "https://github.com/hwilloug/hannah-dot-dev-v2",
     techStack: ["Astro", "Tailwind CSS", "Vercel"],
     body: `
-      <p></p>
+      <p>I started this project back in 2022, and I thought it'd be fun to just make a pure HTML/CSS site. It didn't seem worth it to use a framework. This was great for a first pass and thinking differently than React, but the site really needed updating to be more modern. Since I started this project, I've found Astro, which is perfect for this kind of site, so I gave it a good 'ol refactor.</p>
+      <p>To start, I prompted Bolt.new to build me a single-page static website. I prompted it to make the site styled like Windows 95, then exported the code to a new repository and edited it from there with my unique style. I used Tailwind CSS for styling, and Vercel for deployment since it's free and links right up to my GitHub repo.</p>
+      <p>I designed all the pixel art graphics myself using a program called Aesprite. Then, it was just a matter of styling to my liking and adding some interactivity.</p>
     `
   },
   {
@@ -71,7 +73,7 @@ const projects = [
 ---
 
 <Layout title="Project Technical Information">
-  <div class="container flex flex-col gap-8">
+  <div class="container flex flex-col gap-8 max-w-md">
     {projects.map((project) => (
       <div class="window">
         <div class="window-title">
