@@ -1,30 +1,28 @@
 ---
 import WindowButtons from "./WindowButtons.astro";
 import StarHeader from "./StarHeader.astro";
+import ProjectCard from "./ProjectCard.astro";
 
 const projects = [
   {
     title: "Humble Cup Coffee Co.",
     description: "A website for a local coffee shop in Fort Mill, SC",
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.10.12%E2%80%AFPM.png",
-    link: "https://humble-cup-coffee-co.vercel.app/",
-    pageLink: "/humble-cup-coffee",
-    inProgress: true,
+    link: undefined,
+    inProgress: false,
   },
   {
     title: "Hannah's Hobby Room",
     description: "My personal blog",
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.25.30%E2%80%AFPM.png",
     link: "https://hannahshobbyroom.com/",
-    pageLink: "/hannahs-hobby-room",
     inProgress: false,
   },
   {
     title: "Whispering Willow Diary",
     description: "A journaling/diary website geared towards people with mood disorders.",
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-23+at+4.29.18%E2%80%AFPM.png",
-    link: "https://whisperingwillowdiary.com/",
-    pageLink: "/whispering-willow-diary",
+    link: undefined,
     inProgress: false,
   },
   {
@@ -32,18 +30,26 @@ const projects = [
     description: "My personal projects page (this site!)",
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-25+at+1.34.34%E2%80%AFPM.png",
     link: "https://hannahwilloughby.dev/",
-    pageLink: "/hannah-dot-dev",
-    inProgress: true,
+    inProgress: false,
   },
   {
     title: "Tega Cay Animal Hospital",
     description: "A website for a local animal hospital in Tega Cay, SC.",
     image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2025-02-26+at+6.48.14%E2%80%AFPM.png",
-    link: "https://tcah.vercel.app/",
-    pageLink: "/tega-cay-animal-hospital",
-    inProgress: true,
+    link: undefined,
+    inProgress: false,
   },
+  {
+    title: "Hannah's Painted Ribbon",
+    description: "A website dedicated to my ribbon embroidery",
+    image: "https://hannahdotdev-images.s3.us-east-1.amazonaws.com/Screenshot+2026-05-26+at+10.24.45%E2%80%AFAM.png",
+    link: "https://hannahspaintedribbon.com/",
+    inProgress: false,
+  }
 ];
+
+const liveProjects = projects.filter((project) => project.link);
+const otherProjects = projects.filter((project) => !project.link);
 ---
 
 <section id="projects" class="section window">
@@ -51,19 +57,26 @@ const projects = [
     <h2>Projects</h2>
     <WindowButtons />
   </div>
-  <div class="content">
-    <div class="project-grid">
-      {projects.map((project) => (
-        <a href={project.link} target="_blank" class="project-item">
-          <img class="project-image mx-auto" src={project.image} alt={project.title}>
-          <StarHeader title={project.title} />
-          <p>{project.description}</p>
-          {project.inProgress && <p class="text-sm text-right text-gray-500">(in progress)</p>}
-        </a>
-      ))}
-    </div>
-  </div>
-  <div class="text-center my-6">
-    <a href="/project-technical-info" class="action-button">More Information</a>
+  <div class="content project-sections">
+    {liveProjects.length > 0 && (
+      <div class="project-section">
+        <StarHeader title="Live Projects" />
+        <div class="project-grid">
+          {liveProjects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </div>
+    )}
+    {otherProjects.length > 0 && (
+      <div class="project-section">
+        <StarHeader title="Other/Old Projects" />
+        <div class="project-grid">
+          {otherProjects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 </section>

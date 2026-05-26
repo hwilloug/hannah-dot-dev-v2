@@ -1,0 +1,23 @@
+---
+import StarHeader from "./StarHeader.astro";
+
+const { project } = Astro.props;
+---
+
+{
+  project.link ? (
+    <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-item">
+      <img class="project-image mx-auto" src={project.image} alt={project.title} />
+      <StarHeader title={project.title} />
+      <p>{project.description}</p>
+      {project.inProgress && <p class="text-sm text-right text-gray-500">(in progress)</p>}
+    </a>
+  ) : (
+    <div class="project-item">
+      <img class="project-image mx-auto" src={project.image} alt={project.title} />
+      <StarHeader title={project.title} />
+      <p>{project.description}</p>
+      {project.inProgress && <p class="text-sm text-right text-gray-500">(in progress)</p>}
+    </div>
+  )
+}

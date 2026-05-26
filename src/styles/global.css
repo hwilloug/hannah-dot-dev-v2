@@ -227,6 +227,16 @@ footer {
   gap: 1rem;
 }
 
+.project-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-section .project-grid {
+  margin-top: 0.75rem;
+}
+
 .cert-item, .project-item {
   background: var(--primary);
   padding: 12px;
